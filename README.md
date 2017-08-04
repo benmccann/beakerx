@@ -34,13 +34,25 @@ Notebook (source code archive)](https://github.com/twosigma/beaker-notebook-arch
 
 ## Install
 
-Using [conda](https://conda.io/docs/install/quick.html):
+### Dependencies:
+
+* [conda](https://conda.io/docs/install/quick.html) (any Python 3 environment should be fine, but our documentation assumes conda)
+
+Set up conda environment:
+
+```
+conda create -y -n beakerx python=3.5 jupyter openjdk yarn
+source activate beakerx
+```
+
+
+Install using [conda](https://conda.io/docs/install/quick.html):
 
 ```
 conda install -c beakerx beakerx
 ```
 
-Using pip:
+or install using pip:
 
 ```
 pip install beakerx
@@ -50,17 +62,8 @@ jupyter nbextension enable beakerx --py --sys-prefix
 
 ## Developer Install
 
-### Dependencies:
-
-* [yarn](https://yarnpkg.com/lang/en/docs/install/)
-* [conda](https://conda.io/docs/install/quick.html) (any Python 3 environment should be fine, but our documentation assumes conda).
-
-### Install
-
 ```
-conda create -y -n beakerx python=3.5 jupyter openjdk yarn
-source activate beakerx
-(cd beakerx; pip install -e . --verbose)
+(cd beakerx; pip install -e beakerx --verbose)
 ```
 
 ### Update after Java change
